@@ -58,7 +58,7 @@ var PolylineTextPath = {
             fillColor: 'black',
             attributes: {},
             below: false,
-            rotate: false
+            rotate: 0
         };
         options = L.Util.extend(defaults, options);
 
