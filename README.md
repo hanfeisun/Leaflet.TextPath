@@ -46,7 +46,7 @@ With a GeoJSON containing lines, it becomes:
 * `center` Centers the text according to the polyline's bounding box  (Default: `false`)
 * `attributes` Object containing the attributes applied to the `text` tag. Check valid attributes [here](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/text#Attributes) (Default: `{}`)
 * `below` Show text below the path (Default: false)
-* `rotate` Turn every character of the text 90 degrees to the right (Default: false)
+* `rotate` Turn every character of the text clockwise with the specified degrees. Although any angle value may be used, the value is determined by rounding it to the nearest multiple of 90 degrees. (Default: 0)
 
 Screenshot
 ----------
