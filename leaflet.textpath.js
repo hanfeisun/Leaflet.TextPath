@@ -58,7 +58,7 @@ var PolylineTextPath = {
             fillColor: 'black',
             attributes: {},
             below: false,
-            rotate: false
+            rotate: 0
         };
         options = L.Util.extend(defaults, options);
 
@@ -106,9 +106,10 @@ var PolylineTextPath = {
         textNode.appendChild(textPath);
         this._textNode = textNode;
 
-        if (options.rotate) {
+        if (parseInt(options.rotate)) {
             var textNodeStyle = textNode.getAttribute("style") ? textNode.getAttribute("style") : "";
-            textNodeStyle += "writing-mode: tb; glyph-orientation-vertical: 180;";
+            var rotation = options.rotate + 90;
+            textNodeStyle += "writing-mode: tb; glyph-orientation-vertical: " + rotation + ";";
             textNode.setAttribute("style",  textNodeStyle);
         }
 
